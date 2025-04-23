@@ -5,13 +5,12 @@ from rich import print
 
 load_dotenv()
 
-api_key = os.environ["GEMINI_API_KEY"]
+api_key = os.environ["GROQ_API_KEY"]
 
 def get_llm_response(message):
     response = completion(
-        #model="groq/qwen-qwq-32b",
-        model = "gemini/gemini-2.5-flash-preview-04-17",
-        #api_key = api_key,
+        model = "groq/llama3-70b-8192",
+#        api_key=api_key,
         messages=message,
         stream=False
     )
