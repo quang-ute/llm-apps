@@ -10,7 +10,7 @@ load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
 client = Groq()
 
-# First prompt
+# Step 1 - First prompt
 generation_chat_history = [
     {
         "role": "system",
@@ -44,7 +44,7 @@ generation_chat_history.append(
 )
 print(nasm_code)
 
-# Reflection
+# Step 2 - Reflection
 reflection_chat_history = [
     {
         "role": "system",
@@ -71,7 +71,7 @@ generation_chat_history.append(
     }
 )
 
-# Third generation
+# Step 4 - New generation starts
 essay = client.chat.completions.create(
     messages=generation_chat_history,
     model="llama3-70b-8192"
