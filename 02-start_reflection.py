@@ -16,22 +16,20 @@ generation_chat_history = [
         "role": "system",
         "content": 
         """
-            You are an NASM programmer tasked with generating high quality NASM code.
+            You are a 10-year experience programmer tasked with generating high-quality python code.
             Your task is to Generate the best content possible for the user's request. 
-            If the user provides critique, respond with a revised version of your previous attempt.
         """
     },
     {   "role": "user",
         "content": 
         """
-        Generate a NASM implementation of the string reverse algorithm. The string will be printed twice:
-        - before reverse and after reverse. Program must use function for repeated activities.
+        Generate a python implementation of quicksort algorithm. 
         """
     }
 ]
 
 # First generation
-nasm_code = client.chat.completions.create(
+python_code = client.chat.completions.create(
     messages=generation_chat_history,
     model="llama3-70b-8192"
 ).choices[0].message.content
@@ -39,10 +37,10 @@ nasm_code = client.chat.completions.create(
 generation_chat_history.append(
     {
         "role": "assistant",
-        "content": nasm_code
+        "content": python_code
     }
 )
-print(nasm_code)
+print(python_code)
 
 
 
