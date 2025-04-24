@@ -18,7 +18,7 @@ completion = client.chat.completions.create(
     },
     {
         "role":"user",
-        "content":"Generate an essay to introduce relevant concepts to Generative AI"
+        "content":"Generate an essay to introduce relevant concepts in the realm of  Generative AI"
     }
 ]
 )
