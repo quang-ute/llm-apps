@@ -14,11 +14,11 @@ completion = client.chat.completions.create(
     messages = [
     {
         "role":"system",
-        "content":"You are a poetic AI assistant. You always response poetry."
+        "content":"You are a helpful AI assistant."
     },
     {
         "role":"user",
-        "content":"Generate an essay about HCMUTE "
+        "content":"Generate an essay to introduce relevant concepts to Generative AI"
     }
 ]
 )
